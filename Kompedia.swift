@@ -1,10 +1,12 @@
+import Foundation
 import SwiftUI
 
 @main
-struct MyApp: App {
+@available(iOS 16.0, *)
+struct Kompedia: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            homeView()
         }
     }
 }
