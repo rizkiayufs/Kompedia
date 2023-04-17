@@ -37,7 +37,7 @@ struct personalOnlyView: View {
                     .fontWeight(.regular)
                     .frame(width: 460, height: 200)
                 
-                Button("Try Again"){
+                Button("Try Other Topic"){
                     let messages = ["What are the highest and lowest points of your life?", "What is your biggest passion? Why?","Where's your life headed?"]
                     
                     messageString = messages[messageNumber]

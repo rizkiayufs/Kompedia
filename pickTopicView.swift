@@ -20,7 +20,7 @@ struct pickTopicView: View {
                 .frame(width: 1024, height: 1366)
                 .opacity(0.2)
             
-            VStack(alignment: .center) {
+            VStack {
                 HStack{
                     ZStack {
                         RoundedRectangle(cornerRadius: 12)
@@ -29,19 +29,19 @@ struct pickTopicView: View {
                             .background(Color.white)
                         
                         VStack{
-                            Text("Random")
+                            Text("Occupational")
                                 .font(.system(size:40))
                                 .fontWeight(.semibold)
                                 .frame(width: 332, height: 48)
-                            Text("No need to think, just pick random topic here!")
+                            Text("Are you preparing for an upcoming job interview? Let's train with these topics!")
                                 .multilineTextAlignment(.center)
                                 .lineLimit(4)
                                 .font(.system(size:28))
                                 .frame(width: 332, height: 160)
-                            NavigationLink(destination: randomView(), label: {
+                            NavigationLink(destination: occupationalOnlyView(), label: {
                                 Text("Generate")
                                     .padding()
-                                    .frame(width: 172, height: 54)
+                                    .frame(width: 332, height: 54)
                                     .background(Color.Black)
                                     .font(.system(size: 32))
                                     .fontWeight(.semibold)
@@ -62,7 +62,7 @@ struct pickTopicView: View {
                                 .font(.system(size:40))
                                 .fontWeight(.semibold)
                                 .frame(width: 332, height: 48)
-                            Text("Want to talk about your feeling or experiences? Here’s personal topic you can try!")
+                            Text("Want to talk about your feeling or experiences? Here’s personal topics you can try!")
                                 .multilineTextAlignment(.center)
                                 .lineLimit(4)
                                 .font(.system(size:28))
@@ -70,7 +70,7 @@ struct pickTopicView: View {
                             NavigationLink(destination: personalOnlyView(), label: {
                             Text("Generate")
                                 .padding()
-                                .frame(width: 172, height: 54)
+                                .frame(width: 332, height: 54)
                                 .background(Color.Orange)
                                 .font(.system(size: 32))
                                 .fontWeight(.semibold)
@@ -93,7 +93,7 @@ struct pickTopicView: View {
                                 .font(.system(size:40))
                                 .fontWeight(.semibold)
                                 .frame(width: 332, height: 48)
-                            Text("Practice your casual communication skill and have fun with your friends using this topic!")
+                            Text("Practice your casual communication skill and have fun with your friends using these topics!")
                                 .multilineTextAlignment(.center)
                                 .lineLimit(4)
                                 .font(.system(size:28))
@@ -101,7 +101,7 @@ struct pickTopicView: View {
                             NavigationLink(destination: funOnlyView(), label: {
                                 Text("Generate")
                                     .padding()
-                                    .frame(width: 172, height: 54)
+                                    .frame(width: 332, height: 54)
                                     .background(Color.Yellow)
                                     .font(.system(size: 32))
                                     .fontWeight(.semibold)
@@ -123,7 +123,7 @@ struct pickTopicView: View {
                                 .font(.system(size:40))
                                 .fontWeight(.semibold)
                                 .frame(width: 332, height: 48)
-                            Text("Ready to discuss serious things to boost your public speaking skill? Here’s the topic!")
+                            Text("Ready to discuss serious things to boost your public speaking skill? Here’s the topics!")
                                 .multilineTextAlignment(.center)
                                 .lineLimit(4)
                                 .font(.system(size:28))
@@ -131,7 +131,7 @@ struct pickTopicView: View {
                             NavigationLink(destination: seriousOnlyView(), label: {
                                 Text("Generate")
                                     .padding()
-                                    .frame(width: 172, height: 54)
+                                    .frame(width: 332, height: 54)
                                     .background(Color.Green)
                                     .font(.system(size: 32))
                                     .fontWeight(.semibold)
@@ -144,6 +144,7 @@ struct pickTopicView: View {
                         }
                     .offset(y: 40)
                     }
+            .offset(x: -20, y: -160)
                     
                 }
             }

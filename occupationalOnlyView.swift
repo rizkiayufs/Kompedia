@@ -1,15 +1,13 @@
-
-
 import Foundation
 import SwiftUI
 
 @available(iOS 16.0, *)
-struct funOnlyView: View {
-    @State private var messageString = "If Your Best Friend Wrote A Book About You, What Would The Title Be? What About Your Worst Enemy?"
-    @State private var imageName = "fun0"
+struct occupationalOnlyView: View {
+    @State private var messageString = "Can you share a little about your work experience and how it relates to your current position?"
+    @State private var imageName = "occupational0"
     @State private var messageNumber = 1
     @State private var imageNumber = 1
-    
+
     @available(iOS 16.0, *)
     var body: some View {
         
@@ -22,11 +20,12 @@ struct funOnlyView: View {
                 .opacity(0.2)
             
             VStack {
-                Text("Fun")
+                Text("Occupational")
                     .font(.system(size:40))
                     .fontWeight(.semibold)
                     .frame(width: 332, height: 48)
-                    .foregroundColor(Color.Yellow)
+                    .foregroundColor(Color.Black)
+
                
                 Image(imageName)
                     .frame(width: 348, height: 320)
@@ -38,9 +37,8 @@ struct funOnlyView: View {
                     .fontWeight(.regular)
                     .frame(width: 460, height: 200)
                 
-
                 Button("Try Other Topic"){
-                    let messages = ["If Your Best Friend Wrote A Book About You, What Would The Title Be? What About Your Worst Enemy?", "Do you believe that alien is real?", "If you got three wishes from a genie, what would they be?", "If you had to be a Marvel character, who would you choose?", "Would you rather live in the 1800s or the 3000s?"]
+                    let messages = ["Can you share a little about your work experience and how it relates to your current position?", "What are your strengths and weaknesses, and how do you think they will impact your ability to succeed in your current role?","Can you give an example of a time when you had to overcome a challenge at work, and how did you handle it?", "How do you stay organized and prioritize your tasks in a fast-paced work environment?", "What are your long-term career goals, and how do you see your current position fitting into them?"]
                     
                     messageString = messages[messageNumber]
                     messageNumber += 1
@@ -48,19 +46,19 @@ struct funOnlyView: View {
                         messageNumber = 0
                     }
                     
-                    imageName = "fun\(imageNumber)"
+                    imageName = "occupational\(imageNumber)"
                     imageNumber = imageNumber + 1
                     if imageNumber > 4 {
                         imageNumber = 0
                     }
                 }
-                        .fontWeight(.semibold)
-                        .font(.system(size: 32))
-                        .padding()
-                        .frame(width: 460, height: 62)
-                        .background(Color.Yellow)
-                        .foregroundColor(.white)
-                        .cornerRadius(12)
+                .fontWeight(.semibold)
+                .font(.system(size: 32))
+                .padding()
+                .frame(width: 460, height: 62)
+                .background(Color.Black)
+                .foregroundColor(.white)
+                .cornerRadius(12)
                     
                 }
             .frame(width: 540, height: 734)
@@ -71,9 +69,10 @@ struct funOnlyView: View {
     }
 
 @available(iOS 16.0, *)
-struct funOnlyView_Preview: PreviewProvider {
+struct occupationalOnlyView_Preview: PreviewProvider {
     static var previews: some View {
-        funOnlyView()
+        occupationalOnlyView()
     }
 }
       
+

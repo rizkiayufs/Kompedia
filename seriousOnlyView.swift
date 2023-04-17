@@ -38,7 +38,7 @@ struct seriousOnlyView: View {
                     .fontWeight(.regular)
                     .frame(width: 460, height: 200)
                 
-                Button("Try Again"){
+                Button("Try Other Topic"){
                     let messages = ["Should homework be banned?", "Should governments invest in alternative energy sources?","Should all people be vegetarians?", "Should our governments provide loan for all students so that everyone have “similar” start points?", "What do you think about property as investment?"]
                     
                     messageString = messages[messageNumber]
